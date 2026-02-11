@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
-          pip install flake9 flake8-django flake8-django-migrations
+          pip install flake8 flake8-django flake8-django-migrations
 
       - name: Run Tests
         run: python manage.py test --noinput
@@ -31,9 +31,6 @@ jobs:
 
       - name: Run flake8
         run: flake8 .
-        env:
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          DEBUG: ${{ secrets.DEBUG }}
 
       - name: Login Docker Hub
         uses: docker/login-action@v3
