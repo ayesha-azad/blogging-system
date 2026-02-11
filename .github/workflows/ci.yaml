@@ -22,7 +22,7 @@ jobs:
             DEBUG=${{ secrets.DEBUG }}
       
       - name: Docker Build and Push
-        run: actions/build-push-action@v4 
+        run: docker/build-push-action@v5
         with:
           context: .
           file: Dockerfile
