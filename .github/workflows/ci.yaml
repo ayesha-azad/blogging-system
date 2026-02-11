@@ -19,7 +19,9 @@ jobs:
           cache: 'pip'
 
       - name: Install Dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install flake9 flake8-django flake8-django-migrations
 
       - name: Run Tests
         run: python manage.py test --noinput
