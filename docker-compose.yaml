@@ -1,0 +1,14 @@
+services:
+  django-blog:
+    build: .
+    container_name: django-blog
+    image: ayeshaazad/django-blog
+    environment:
+      SECRET_KEY: ${SECRET_KEY}
+      DEBUG: ${DEBUG}
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8030"
+    ports:
+      - "8030:8030"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./media:/app/media
