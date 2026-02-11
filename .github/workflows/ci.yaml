@@ -3,7 +3,7 @@ name: CI for Django Blog
 on:
   push:
   pull_request:
-  worflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
