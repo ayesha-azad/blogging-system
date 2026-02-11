@@ -1,11 +1,5 @@
 FROM python:3.9-slim 
 
-ARG SECRET_KEY
-ARG DEBUG
-
-ENV SECRET_KEY=$SECRET_KEY
-ENV DEBUG=$DEBUG
-
 WORKDIR /app
 
 COPY ./requirements.txt /app/

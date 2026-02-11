@@ -2,9 +2,6 @@ services:
   django-blog:
     build: 
       context: .
-      args:
-        SECRET_KEY: ${SECRET_KEY}
-        DEBUG: ${DEBUG}
     container_name: django-blog
     image: ayeshaazad/django-blog
     environment:
